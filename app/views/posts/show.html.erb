@@ -1,0 +1,8 @@
+<h3><%= @post.title.html_safe %></h3>
+
+  <%= simple_format @post.body %>
+
+<p> <%= post_footer(@post) %> </p>
+<p>
+  <%= link_to "Wróć do spisu", posts_path %>
+</p>

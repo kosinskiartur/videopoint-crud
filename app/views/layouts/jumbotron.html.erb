@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crud</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <div class="jumbotron">
+          <h1>WOW!</h1>
+          <%= yield :jumbotron_content %>
+        </div>
+        <% if flash[:notice].present? %>
+          <div class="allert alert-success">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+        <h1>Demonstracja CRUD</h1>
+      </div>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>
